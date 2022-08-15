@@ -1,0 +1,63 @@
+@import "../../Sass/_reset.sass"
+@import "../../Sass/_root.sass"
+@import "../../Sass/_variables.sass"
+@import "../../Sass/mixins/_icon-btn.sass"
+
+.task
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  max-width: 100%
+  height: 60px
+  padding: 10px
+
+  font:
+    size: 24px
+  color: $dark-blue
+
+  border: 2px solid transparent
+    radius: 20px
+
+  &--waiting
+    background: $task-waiting
+
+  &--processing
+    background: $task-processing
+
+  &--done
+    background: $task-done
+
+  &--default
+    border: 2px solid $main-blue
+
+  &__name
+    display: inline-block
+    height: 36px
+    padding: 0 4px
+    margin-right: auto
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    line-height: 28px
+
+    border: 4px solid $main-white
+    border-radius: 12px
+    background: $main-white
+
+  &__btn-wrapper
+    min-width: max-content
+    margin-left: 8px
+
+  &__btn
+    @include icon-btn
+
+    margin-right: 2px
+
+    &:last-of-type
+      margin-right: 0
+
+  &__btn-svg
+    @include icon-btn-svg
+    

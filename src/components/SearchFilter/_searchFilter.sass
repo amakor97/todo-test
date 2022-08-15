@@ -1,0 +1,27 @@
+@import "../../Sass/_reset.sass"
+@import "../../Sass/_root.sass"
+@import "../../Sass/_variables.sass"
+@import "../../Sass/mixins/_text-input.sass"
+@import "../../Sass/mixins/_icon-btn.sass"
+
+.searchFilter
+  position: relative
+
+  width: 100%
+  height: 40px
+  margin-bottom: 10px
+
+  &__form
+    position: relative
+
+  &__input
+    @include text-input
+
+  &__reset-btn
+    @include icon-btn
+    position: absolute
+    top: 0
+    right: 0
+
+  &__reset-btn-svg
+    @include icon-btn-svg
